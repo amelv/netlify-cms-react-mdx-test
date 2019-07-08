@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import CMS from "netlify-cms"
+import { MdxControl, MdxPreview } from 'netlify-cms-widget-mdx';
+
+CMS.registerWidget('mdx', MdxControl, MdxPreview);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

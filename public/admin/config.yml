@@ -1,11 +1,22 @@
 backend:
   name: github
-  repo: amelv/react-quantum-atlas
+  repo: amelv/netlify-cms-react-mdx-test
+
 
 media_folder: "public/images"
 public_folder: "images"
 
 collections:
+  - name: 'mdx'
+    label: 'Mdx Example'
+    description: 'Documentation'
+    folder: 'src'
+    extension: 'mdx'
+    format: 'frontmatter'
+    create: true
+    fields:
+        -  {label: "Title", name: "title", widget: "string"}
+        -  {label: "Body", name: "body", widget: "markdown"}
   - name: settings
     label: Settings
     files:
